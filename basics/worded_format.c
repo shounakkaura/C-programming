@@ -1,0 +1,84 @@
+#include <stdio.h>
+
+int main(){
+
+    int d, m, y;
+
+    printf("ENTER DAY: ");
+    scanf("%d", &d);
+
+    printf("ENTER MONTH: ");
+    scanf("%d", &m);
+
+    printf("ENTER YEAR: ");
+    scanf("%d", &y);
+
+    printf("%d", d);
+
+    if (d == 1 || d == 21 || d == 31)
+        printf("st ");
+    else if (d == 2 || d == 22)
+        printf("nd ");
+    else if (d == 3 || d == 23)
+        printf("rd ");
+    else
+        printf("th ");
+
+    switch(m) {
+        case 1:
+            printf("January, ");
+            break;
+
+        case 2:
+            printf("February, ");
+            break;
+
+        case 3:
+            printf("March, ");
+            break;
+
+        case 4:
+            printf("April, ");
+            break;
+
+        case 5:
+            printf("May, ");
+            break;
+
+        case 6:
+            printf("June, ");
+            break;
+
+        case 7:
+            printf("July, ");
+            break;
+
+        case 8:
+            printf("August, ");
+            break;
+
+        case 9:
+            printf("September, ");
+            break;
+
+        case 10:
+            printf("October, ");
+            break;
+
+        case 11:
+            printf("November, ");
+            break;
+
+        case 12:
+            printf("December, ");
+            break;
+
+        default:
+            printf("Invalid month");
+            return 0;
+    }
+
+    printf("%d", y);
+
+    return 0;
+}
