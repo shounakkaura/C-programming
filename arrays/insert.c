@@ -1,23 +1,32 @@
 #include <stdio.h>
-int main () {
-    int arr[10] = {34,67,13,80,95, 21, 45, 90, 12,};
-    printf("original array: ");
-    for (int i=0; i<8; i++) {
-        printf("%d ", arr[i]);
+int main()
+{
+    // To insert an element in an array of integers
+    int arr[100];
+    int i, n, idx, e, v;
+    printf("Enter length of array: ");
+    scanf("%d", &n);
+    for (i = 0; i < n; i++)
+    {
+        printf("Enter value at index %d :", i);
+        scanf("%d", &v);
+        arr[i] = v;
     }
-    printf("\n At which index you want to insert the element: ");
-    int index;
-    scanf("%d", &index);
-    printf("Enter the element you want to insert: ");
-    int element;
-    scanf("%d", &element);
-    for (int i=9; i>index; i--) {
-        arr[i] = arr[i-1];
+    printf("Enter element to be inserted: ");
+    scanf("%d", &e);
+    printf("Enter index at which element to be inserted: ");
+    scanf("%d", &idx);
+
+    for (i = n - 1; i >= idx; i--)
+    {
+        arr[i + 1] = arr[i];
     }
-    arr[index] = element;
-    printf("Array after insertion: ");
-    for (int i=0; i<9; i++) {
-        printf("%d ", arr[i]);
+    arr[idx] = e;
+    printf("New array is :{");
+    for (i = 0; i < n; i++)
+    {
+        printf("%d, ", arr[i]);
     }
+    printf("}");
     return 0;
 }
