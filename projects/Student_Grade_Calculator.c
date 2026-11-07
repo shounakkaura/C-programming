@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #define SUBJECT 5
 #define PASS_MARKS 33
 #define MAX_MARKS 100
@@ -65,11 +66,20 @@ int main()
 
         case 3:
             printf("\nThank you for using Student Grade Calculator!\n");
+            printf("\nPress Enter to exit...");
+            getchar();
+            system("cls");
             return 0;
         default:
+        {
             printf("\nInvalid choice! Please select 1, 2 or 3.\n");
         }
+            printf("\nPress Enter to return to the main menu...");
+            getchar();
+            system("cls");
+        }
     }
+
     return 0;
 }
 
@@ -121,6 +131,9 @@ void Grades()
     printf("Below 33%%  : F\n");
     printf("\nMinimum passing marks per subject: %d\n", PASS_MARKS);
     printf("======================================\n");
+    printf("\nPress Enter to return to the main menu...");
+    getchar();
+    system("cls");
 }
 
 // Input student details
@@ -235,4 +248,7 @@ void result(struct student s)
            s.isPassed ? "PASS" : "FAIL");
 
     printf("========================================\n");
+    printf("\nPress Enter to return to the main menu...");
+    getchar();
+    system("cls");
 }
