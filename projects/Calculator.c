@@ -9,7 +9,9 @@ int main()
 
     do
     {
-        printf("\n===== CALCULATOR =====\n");
+        printf("\n========================================\n");
+        printf("         CALCULATOR\n");
+        printf("========================================\n");
         printf("1. Addition (+)\n");
         printf("2. Subtraction (-)\n");
         printf("3. Multiplication (*)\n");

@@ -31,6 +31,9 @@ int permutation(int n, int r)
 }
 int main()
 {
+    printf("\n==========================================\n");
+    printf("  PERMUTATION AND COMBINATION CALCULATOR\n");
+    printf("==========================================\n");
     int n, r, ans = 0;
     char a;
     printf("Enter a n: ");
